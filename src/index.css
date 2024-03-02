@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Upright:wght@700&family=Open+Sans&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+html {
+ background-color: #0C0B08;
+}
+
+body {
+    font-family: 'Cormorant Upright', 'serif';
+}
+body::-webkit-scrollbar{
+    display: none;
+}
+.bg-image {
+    background-image: url(/images/about-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+   }
+.active {
+    color: gold;
+    /* font-weight: bolder; */
+}
+   .grid1 {
+    grid-template-columns: repeat(auto-fit,minmax(100px,1fr));
+   }
+   .grid2 {
+    grid-template-columns: repeat(auto-fit,minmax(180px,1fr));
+   }
