@@ -5,6 +5,7 @@ import Nav from './Nav';
 import Footer1 from './Footer1';
 import Spinner from './Spinner';
 import Button from './Button';
+import { useState } from 'react';
 
 
 
@@ -12,10 +13,15 @@ import Button from './Button';
 const   FetchMealInfo = async (meal) => {
   const response = await fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${meal}`);
   const data = await response.json();
-  console.log(data);
+  // console.log(data);
   return data.meals[0];
 };
-export default function MealInfo() {
+export default function MealInfo({ saveMeal }) {
+  const handleSaveMeal = () => {
+    if (data) {
+      saveMeal({ strMeal: data.strMeal, strMealThumb: data.strMealThumb });
+    }
+  };
 
   const navigate = useNavigate();
   const goBack = () => {
@@ -54,13 +60,13 @@ export default function MealInfo() {
             {data.strTags && (
                     <div>
                       {data.strTags.split(',').map((tag, index) => (
-                        <button key={index} className='px-5 py-2 mt-5 mr-2 font-bold text-black rounded-full bg-primary'>
+                        <button  key={index} className='px-5 py-2 mt-5 mr-2 font-bold text-black rounded-full bg-primary'>
                           {tag.trim()}
                         </button>
                       ))}
                     </div>
                   )}
-            <div className='absolute bottom-0'><Button>Save Meal</Button></div>
+            <div className='absolute bottom-0' onClick={handleSaveMeal}><Button>Save Meal</Button></div>
           </div>
          </section>
           
