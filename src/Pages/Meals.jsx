@@ -19,9 +19,11 @@ export default function Meals() {
   return (
     <div className='font-upright min-h-screen flex flex-col'>
         <Nav/>
-         <SearchInput onSearch={handleSearch}/>
+       <div className='mb-12'>
+       <SearchInput onSearch={handleSearch}/>
         {!searched && <CategoryGallery curCategory={curCategory} setCurCategory={setCurCategory}  onSearch={handleSearch} />}
         {searched && <SearchedMealGallery searchedMeal={searchedMeal} />}
+       </div>
         <div className='mt-auto'>
           <Footer1/>
         </div>

@@ -12,6 +12,7 @@ export default {
       },
       backgroundImage : {
         'about-bg': "url('/image/BG.jpg')",
+         'blur_hero' : "url('/images/Hero img _blur.png')"
       },
       colors : {
         'primary' : '#DCCA87',

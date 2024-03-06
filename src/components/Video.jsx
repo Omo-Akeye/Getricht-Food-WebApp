@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react'
+import React, { lazy, useRef, useState } from 'react'
 
 export default function Video() {
     const videoRef = useRef(null);
@@ -17,7 +17,7 @@ export default function Video() {
     };
   return (
     <div className='relative w-full h-screen'>
-    <video ref={videoRef} className='absolute inset-0 object-cover w-full h-full'>
+    <video ref={videoRef} className='absolute inset-0 object-cover w-full h-full' >
       <source src="/images/istockphoto-857947444-640_adpp_is.mp4" type="video/mp4" />
       Your browser does not support the video tag.
     </video>

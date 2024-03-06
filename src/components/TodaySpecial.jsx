@@ -1,5 +1,7 @@
 import React from 'react'
 import Button from './Button'
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 
 export default function TodaySpecial() {
@@ -84,8 +86,12 @@ export default function TodaySpecial() {
               
             </main>
 
-            <div > 
-                <img src="/images/today-removebg-preview.png" className='w-[80%] m-auto' alt="" />
+            <div className='w-[80%] m-auto' > 
+            <LazyLoadImage
+    alt={'hero'}
+    effect="blur"
+    src={'/images/today-removebg-preview.webp'} />
+                {/* <img src="" loading='lazy'  alt="" /> */}
             </div>
 
             <main className=''>

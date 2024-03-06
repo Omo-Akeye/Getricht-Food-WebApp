@@ -1,4 +1,7 @@
 import React from 'react'
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
+
 
 export default function ChefWord() {
   return (
@@ -7,7 +10,11 @@ export default function ChefWord() {
     <section className='w-[80%] m-auto grid grid-cols-2 gap-24 items-center'>
 
     <div className=' '>
-          <img src="/images/chef.png" className=' ' alt="" />
+    <LazyLoadImage
+    alt={'hero'}
+    effect="blur"
+    src={'/public/images/chef.webp'} />
+          {/* <img src="/images/chef.png" loading='lazy' className=' ' alt="" /> */}
        </div>
           <div>
           <h5 className='text-white text-2xl'>Chef's Word</h5>

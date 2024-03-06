@@ -1,5 +1,7 @@
 import React from 'react'
 import Button from './Button'
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 export default function FindUs() {
   return (
@@ -20,7 +22,11 @@ export default function FindUs() {
            </div>
             </article>
             <div className='w-full'>
-           <img src="/images/find.png" className='' alt="" />
+            <LazyLoadImage
+    alt={'hero'}
+    effect="blur"
+    src={'/images/find.webp'} />
+           {/* <img src="/images/find.png" className='' alt="" loading='lazy'/> */}
         </div>
         </div>
 
