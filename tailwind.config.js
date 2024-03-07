@@ -11,8 +11,7 @@ export default {
         'sans': ['Open Sans', 'sans-serif'],
       },
       backgroundImage : {
-        'about-bg': "url('/image/BG.jpg')",
-         'blur_hero' : "url('/images/Hero img _blur.png')"
+        'about-bg': "url('/images.BG.webp')",
       },
       colors : {
         'primary' : '#DCCA87',

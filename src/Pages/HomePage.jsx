@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Nav from '../components/Nav'
 import Hero from '../components/Hero'
 import AboutUs from '../components/AboutUs'
@@ -9,11 +9,14 @@ import Laurels from '../components/Laurel '
 import PhotoGallery from '../components/PhotoGallery'
 import FindUs from '../components/FindUs'
 import Footer from '../components/Footer'
+import Modal from '../components/Modal'
 
 export default function HomePage() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
   return (
     <div >
-    <Nav/>
+    <Nav isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen}/>
+    {isModalOpen && <Modal isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen} />}
     <Hero/>
     <AboutUs/>
     <TodaySpecial/>

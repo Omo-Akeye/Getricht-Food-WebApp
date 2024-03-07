@@ -30,17 +30,17 @@ export default function Photo() {
   return (
     <>
         <Swiper
-        slidesPerView={4}
-        spaceBetween={14}
+        slidesPerView={2}
+        spaceBetween={2}
         freeMode={true}
         modules={[FreeMode]}
-        className="mySwiper mt-5 cursor-grab"
+        className="mt-5 mySwiper cursor-grab"
       >
      
      {
         img.map((image) => 
          ( <SwiperSlide  key={image.id}>
-          <div className='border-2  border-primary-b w-full h-full relative object-cover'>
+          <div className='relative object-cover w-full h-full border-2 border-primary-b'>
           <img src={image.src} alt="" className='w-[400px] h-[300px]' />
           <span className='bg-[#0006] w-full h-full absolute top-0 right-0 opacity-0 hover:opacity-100 flex justify-center items-center'>
             <img src="/images/u_instagram.svg" className='' alt="" />
@@ -84,9 +84,9 @@ export default function Photo() {
 //         setWidth(carousel.current.scrollWidth - carousel.current.offsetWidth)
 //     },[])
 //   return (
-// <motion.div ref={carousel} className=' overflow-hidden cursor-grab'>
+// <motion.div ref={carousel} className='overflow-hidden cursor-grab'>
 //     <motion.div drag='x'
-//     dragConstraints={{right:0 , left: -width}} className='my-5 border-2 flex '>
+//     dragConstraints={{right:0 , left: -width}} className='flex my-5 border-2 '>
     
 //     {img.map((image) => (
 //    <motion.div key={image.id} >

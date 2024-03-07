@@ -5,21 +5,21 @@ import 'react-lazy-load-image-component/src/effects/blur.css';
 
 export default function ChefWord() {
   return (
-    <div className='bg-image bg-cover bg-no-repeat relative text-ash py-24'>
+    <div className='relative py-12 md:py-24 bg-image text-ash'>
      
-    <section className='w-[80%] m-auto grid grid-cols-2 gap-24 items-center'>
+    <section className='md:w-[80%] w-[90%] m-auto grid md:grid-cols-2 md:gap-24 items-center gap-12'>
 
-    <div className=' '>
+    <div className=''>
     <LazyLoadImage
     alt={'hero'}
     effect="blur"
-    src={'/public/images/chef.webp'} />
-          {/* <img src="/images/chef.png" loading='lazy' className=' ' alt="" /> */}
+    src={'/images/chef.webp'} />
+        
        </div>
           <div>
-          <h5 className='text-white text-2xl'>Chef's Word</h5>
+          <h5 className='text-2xl text-white'>Chef's Word</h5>
        <img src="/images/Frame 17.svg" alt="" className='my-2'/>
-       <h1 className='text-primary text-6xl'>What We Believe In</h1>
+       <h1 className='text-5xl md:text-6xl text-primary'>What We Believe In</h1>
      
      <article className='my-5'>
      <p className='flex items-center font-sans italic'>
@@ -28,7 +28,7 @@ export default function ChefWord() {
        <p className='font-sans italic'>auctor sit iaculis in arcu. Vulputate nulla lobortis mauris eget sit. Nulla scelerisque scelerisque congue ac consequat, aliquam molestie lectus eu. Congue iaculis integer curabitur semper sit nunc.</p>
 
      </article>
-       <h2 className='text-primary text-4xl'>Kevin Luo</h2>
+       <h2 className='text-4xl text-primary'>Kevin Luo</h2>
        <h4 className='font-sans'>Chef & Founder</h4>
         <img src="/images/Kevin Luo.svg" alt="" className='my-6' />
           </div>

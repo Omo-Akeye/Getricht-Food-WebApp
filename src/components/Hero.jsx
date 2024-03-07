@@ -10,8 +10,8 @@ export default function Hero() {
     backgroundImage:"url('/images/Hero img (1).webp')"
   }
   return (
-    <div className='grid grid-cols-2 lg:w-[80%] w-[90%] m-auto lg:gap-40 gap-28 md:mt-20 lg:mb-40' id='hero'>
-         <div className='mt-6 text-white'>
+    <div className='grid md:grid-cols-2 lg:w-[80%] w-[90%] m-auto lg:gap-40 md:gap-28 gap-8 md:mt-20 lg:mb-40 relative' id='hero'>
+         <div className='mt-6 text-white max-md:order-last'>
             <h2 className='text-2xl'>Chase the new Flavour</h2>
             <img src="/images/Frame 17.svg" alt="" className='py-2'/>
             <h1 className='text-4xl lg:text-8xl md:text-7xl text-primary capitalize lg:leading-[120px]'>The key to fine dining</h1>
@@ -19,8 +19,8 @@ export default function Hero() {
             <Button>Explore Menu</Button>
         </div>
 
-        <section className='relative text-center'>
-          <div className='w-full m-auto'>
+        <section className='text-center'>
+          <div className='m-auto md:w-full w-[90%]'>
           <LazyLoadImage
     alt={'hero'}
     effect="blur"
@@ -28,15 +28,15 @@ export default function Hero() {
           {/* <img src="/images/Hero img (1).png" alt="" className='w-full' /> */}
           </div>
 
-          <div className='absolute lg:right-[-15%] bottom-[5%] cursor-pointer right-[-12%]'>
-         
-          <Link    to="about"  spy={true}  smooth={true}  offset={50} duration={500}>
-          <img src="/images/Scroll.svg" alt=""  />
-          </Link>
-          </div>
+          
           
         </section>
-        
+        <div className='absolute lg:right-[-15%] bottom-[5%] cursor-pointer right-[-12%] max-md:right-[-5%] max-md:bottom-0'>
+         
+          <Link    to="about"  spy={true}  smooth={true}  offset={50} duration={500}>
+          <img src="/images/Scroll.svg" alt="" className=''  />
+          </Link>
+          </div>
     </div>
   )
 }

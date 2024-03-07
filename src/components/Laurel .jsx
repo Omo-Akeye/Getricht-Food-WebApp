@@ -4,44 +4,44 @@ import 'react-lazy-load-image-component/src/effects/blur.css';
 
 export default function Laurels() {
   return (
-    <div className='bg-image  text-white pt-14 pb-28'>
-         <img src="/images/Group 87.png" alt="" className='w-24 mx-12' />
-        <section className=' w-[80%] m-auto grid grid-cols-2 gap-20 mt-3 items-center'>
+    <div className='text-white bg-image pt-14 pb-28'>
+         <img src="/images/Group 87.png" alt="" className='w-24 mx-6 md:mx-12' />
+        <section className='md:w-[80%] w-[90%] m-auto grid md:grid-cols-2 gap-20 mt-3 items-center'>
        
             <div>
           <div className='mb-10'>
-          <h3 className='text-2xl my-2'>Awards & Recognition</h3>
+          <h3 className='my-2 text-2xl'>Awards & Recognition</h3>
              <img src="/images/Frame 17.svg" alt="" />
-             <h2 className='text-primary text-6xl mt-4'>Our Laurels</h2>
+             <h2 className='mt-4 text-6xl text-primary'>Our Laurels</h2>
           </div>
       
-      <article className='grid grid-cols-2 gap-3'>
+      <article className='grid gap-3 md:grid-cols-2'>
 
-      <div className='flex  items-center '>
+      <div className='flex items-center '>
            <img src="/images/Group 26.svg" className='w-20' alt="" />
            <span className='ml-6'>
-            <h2 className='text-primary text-2xl mb-3'>Bib Gourmound</h2>
+            <h2 className='mb-3 text-2xl text-primary'>Bib Gourmound</h2>
             <p className='font-sans text-ash'>Lorem ipsum, dolor sit amet consectetur </p>
            </span>
         </div>
-        <div className='flex  items-center '>
+        <div className='flex items-center '>
            <img src="/images/Group 25.svg" className='w-20' alt="" />
            <span className='ml-6'>
-            <h2 className='text-primary text-2xl mb-3'>Rising Star</h2>
+            <h2 className='mb-3 text-2xl text-primary'>Rising Star</h2>
             <p className='font-sans text-ash'>Lorem ipsum, dolor sit amet consectetur </p>
            </span>
         </div>
-        <div className='flex  items-center mt-12'>
+        <div className='flex items-center mt-4 md:mt-12'>
            <img src="/images/Group 27.svg" className='w-20' alt="" />
            <span className='ml-6'>
-            <h2 className='text-primary text-2xl mb-3'>AA Hospitality</h2>
+            <h2 className='mb-3 text-2xl text-primary'>AA Hospitality</h2>
             <p className='font-sans text-ash'>Lorem ipsum, dolor sit amet consectetur </p>
            </span>
         </div>
-        <div className='flex  items-center mt-12'>
+        <div className='flex items-center mt-4 md:mt-12'>
            <img src="/images/Group 25.svg" className='w-20' alt="" />
            <span className='ml-6'>
-            <h2 className='text-primary text-2xl mb-3'>Outstanding </h2>
+            <h2 className='mb-3 text-2xl text-primary'>Outstanding </h2>
             <p className='font-sans text-ash'>Lorem ipsum, dolor sit amet consectetur </p>
            </span>
         </div>
@@ -51,8 +51,8 @@ export default function Laurels() {
      
             </div>
 
-            <div className='relative text-right'> 
-                <div className='w-[70%] relative inline-block'>
+            <div className='relative text-center md:text-right'> 
+                <div className='md:w-[70%] w-[80%] relative inline-block'>
                 <LazyLoadImage
     alt={'hero'}
     effect="blur"

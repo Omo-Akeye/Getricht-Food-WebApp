@@ -3,9 +3,9 @@ import React from 'react'
 export default function Footer1() {
   return (
     <div className=''>
-         <footer className='text-center text-ash grid grid-cols-3 pb-10'>
+         <footer className='grid pb-10 text-center text-ash md:grid-cols-3 max-md:gap-8'>
             <div>
-                <p className='text-3xl mb-4'>Contact Us</p>
+                <p className='mb-4 text-3xl'>Contact Us</p>
                <span className='font-sans'>
                <p>9 W 53rd St, New York, NY 10019, USA</p>
                 <p>+1 212-344-1230</p>
@@ -14,18 +14,18 @@ export default function Footer1() {
             </div>
 
             <div className=''>
-                <h1 className='text-primary text-6xl swiper-3d'>GERICHT</h1>
-                <p className='font-sans text-white font-bold my-4'>"The best way to find yourself is to lose yourself in the service of others.”</p>
+                <h1 className='text-6xl text-primary swiper-3d'>GERICHT</h1>
+                <p className='my-4 font-sans font-bold text-white'>"The best way to find yourself is to lose yourself in the service of others.”</p>
                 <img src="/image/Frame 17.svg" alt="" className='m-auto' />
-                <div className='text-white mt-2'>
-                <i className="fa-brands fa-facebook-f text-2xl"></i>
-                <i className="fa-brands fa-twitter text-2xl px-4"></i>
-                <i className="fa-brands fa-instagram text-2xl"></i>
+                <div className='mt-2 text-white'>
+                <i className="text-2xl fa-brands fa-facebook-f"></i>
+                <i className="px-4 text-2xl fa-brands fa-twitter"></i>
+                <i className="text-2xl fa-brands fa-instagram"></i>
                 </div>
             </div>
 
             <div>
-                <p className='text-3xl mb-2'>Working Hour</p>
+                <p className='mb-2 text-3xl'>Working Hour</p>
              <span className='font-sans'>
               <div className='mb-2'>
               <p>Monday-Fridays</p>

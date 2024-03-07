@@ -22,7 +22,7 @@ export default function Video() {
       Your browser does not support the video tag.
     </video>
     <button className=' bg-primary' onClick={handlePlayPause}>
-     <img src="/images/Play.png" alt="" className=' absolute  pointer left-[50%] top-[40%] ' />
+     <img src="/images/Play.png" alt="" className=' absolute  pointer md:left-[50%] top-[40%] left-[30%]' />
     </button>
   </div>
   )
