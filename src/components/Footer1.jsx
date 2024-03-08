@@ -2,8 +2,8 @@ import React from 'react'
 
 export default function Footer1() {
   return (
-    <div className=''>
-         <footer className='grid pb-10 text-center text-ash md:grid-cols-3 max-md:gap-8'>
+    <div >
+         <footer className='grid pb-10 text-center text-ash md:grid-cols-3 max-md:gap-8 max-md:w-[90%] m-auto'>
             <div>
                 <p className='mb-4 text-3xl'>Contact Us</p>
                <span className='font-sans'>

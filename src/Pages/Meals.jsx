@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import Nav from '../components/Nav'
 import Footer1 from '../components/Footer1'
 import CategoryGallery from '../components/CategoryGallery'
 import SearchInput from '../components/SearchInput'
@@ -15,14 +14,17 @@ export default function Meals() {
     setSearchedMeal(meal);
     setSearched(true);
   };
+  const handleBack = (meal) => {
+    setSearchedMeal('');
+    setSearched(false)
+  }
   
   return (
     <div className='font-upright min-h-screen flex flex-col'>
-        <Nav/>
        <div className='mb-12'>
        <SearchInput onSearch={handleSearch}/>
         {!searched && <CategoryGallery curCategory={curCategory} setCurCategory={setCurCategory}  onSearch={handleSearch} />}
-        {searched && <SearchedMealGallery searchedMeal={searchedMeal} />}
+        {searched && <SearchedMealGallery searchedMeal={searchedMeal} onBack={handleBack} />}
        </div>
         <div className='mt-auto'>
           <Footer1/>

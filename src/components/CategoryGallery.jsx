@@ -21,21 +21,20 @@ export default function CategoryGallery({curCategory,setCurCategory,onSearch}) {
     return (
     <div>
 
-       <MealsContainer curCategory={curCategory} setCurCategory={setCurCategory}  onSearch={onSearch}/>
+    <MealsContainer curCategory={curCategory} setCurCategory={setCurCategory}  onSearch={onSearch}/>
 
-        <section className='w-[80%] m-auto mt-10'>
-        {status === 'loading' && <Spinner/>}
+     <section className='md:w-[80%] m-auto mt-10 w-[90%]'>
+      {status === 'loading' && <Spinner/>}
 
        {status === 'success' &&   <ul className='grid gap-4 grid2'>
            {details.map((meal) => 
-              (  <li className='px-2 pt-2 border-2 border-primary max-w-[250px]' key={meal.idMeal}>
+              (  <li className='px-2 pt-2 border-2 border-primary md:max-w-[250px]' key={meal.idMeal}>
                    <Link to={`${meal.idMeal}`}>
                    <LazyLoadImage
-    alt={'meal'}
-    effect="blur"
-    src={meal.strMealThumb} />
-               
-                    {/* <img src={meal.strMealThumb} loading="lazy" alt="" className='' onLoad={lazy}/> */}
+                     alt={'meal'}
+                     effect="blur"
+                     src={meal.strMealThumb} />
+    
                     <p className='py-3 overflow-hidden text-center text-ash text-nowrap'>{meal.strMeal}</p>
 
                     </Link>   
@@ -49,17 +48,3 @@ export default function CategoryGallery({curCategory,setCurCategory,onSearch}) {
     </div>
   )
 }
-
-
-
-
-
-  // useEffect(()=> {
-    //     async function getDetails() {
-    //         const res = await fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?c=${curCategory}`)
-    //         const data = await res.json()
-    //         setDetails(data.meals)
-    //         // console.log(data.meals);
-    //     }
-    //     getDetails()
-    // },[curCategory])

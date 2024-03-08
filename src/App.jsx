@@ -2,8 +2,9 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom"
 import HomePage from "./Pages/HomePage"
 import Meals from "./Pages/Meals"
 import SavedMeals from "./Pages/SavedMeals"
-import MealInfo from "./components/MealInfo"
+import MealInfo from "./Pages/MealInfo"
 import { useMemo, useState } from "react"
+import AppLayOut from "./components/AppLayOut"
 
 
 function App() {
@@ -24,23 +25,29 @@ function App() {
     };
   const router = useMemo(()=> {
     return createBrowserRouter([
-   
       {
-        path:'/',
-        element:<HomePage/>
-      },
-      {
-        path:'/meals',
-        element: <Meals/>
-      },
-      {
-         path:'/meals/:idMeal',
-         element:<MealInfo saveMeal={saveMeal}/>
-      },
-      {
-        path: '/savedMeals',
-        element: <SavedMeals savedMeals={savedMeals} removeMeal={removeMeal}/>
+        element: <AppLayOut/>,
+        children: [
+          {
+            path:'/',
+            element:<HomePage/>
+          },
+          {
+            path:'/meals',
+            element: <Meals/>
+          },
+          {
+             path:'/meals/:idMeal',
+             element:<MealInfo saveMeal={saveMeal}/>
+          },
+          {
+            path: '/savedMeals',
+            element: <SavedMeals savedMeals={savedMeals} removeMeal={removeMeal}/>
+          }
+        ]
       }
+   
+    
   
   ])
   }) 

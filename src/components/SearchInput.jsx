@@ -12,7 +12,7 @@ function SearchInput({ onSearch }) {
     }
   };
   return (
-    <article className='w-[80%] m-auto mt-16'>
+    <article className='w-[80%] m-auto md:mt-16'>
 
 <div className='flex items-center justify-center'>
       <input

@@ -1,11 +1,11 @@
 
 import { useQuery } from 'react-query';
 import { useNavigate, useParams } from 'react-router-dom';
-import Nav from './Nav';
-import Footer1 from './Footer1';
-import Spinner from './Spinner';
-import Button from './Button';
-import { useState } from 'react';
+
+import Footer1 from '../components/Footer1';
+import Spinner from '../components/Spinner';
+import Button from '../components/Button';
+
 
 
 
@@ -13,7 +13,6 @@ import { useState } from 'react';
 const   FetchMealInfo = async (meal) => {
   const response = await fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${meal}`);
   const data = await response.json();
-  // console.log(data);
   return data.meals[0];
 };
 export default function MealInfo({ saveMeal }) {
@@ -30,32 +29,28 @@ export default function MealInfo({ saveMeal }) {
   const { idMeal } = useParams();
   const { data , status } = useQuery(['MealInfo', idMeal], () => FetchMealInfo(idMeal));
   
-
   return (
     
       <section className='flex flex-col min-h-screen'>
-        <Nav/>
- 
-
-        <div className='absolute cursor-pointer left-28 top-28' onClick={goBack}>
-            <i className="text-2xl fa-solid fa-left-long text-ash"></i>
+        <div className='absolute cursor-pointer md:left-28 md:top-28 top-[10%] left-[5%]' onClick={goBack}>
+            <i className="text-2xl fa-solid fa-arrow-left text-ash"></i>
         </div>
          
-        <div className='text-ash w-[80%] m-auto  mt-10'>
+        <div className='text-ash md:w-[80%] m-auto  md:mt-10 w-[90%]'>
         {status === 'loading' && <Spinner/>}
         {status === 'success' && (
           <article>
             
             <h1 className='mb-8 text-3xl text-center'>MEAL DETAILS</h1>
-         <section className='grid grid-cols-2 gap-5 mt-5'>
+         <section className='grid md:grid-cols-2 gap-5 mt-5'>
           
-         <div className='w-[80%]'>
+         <div className='w-[80%] text-center max-md:m-auto'>
           <img src={data.strMealThumb} alt="" className='w-full m-auto'/>
           </div>
           
           <div className='relative block text-left'>
             <h1 className='text-3xl text-primary'>{data.strMeal}</h1>
-            <p className='my-8 font-sans'>Category : {data.strCategory}</p>
+            <p className='md:my-8 font-sans my-4'>Category : {data.strCategory}</p>
             <div className='inline-block px-2 text-xl font-bold text-black rounded-full bg-primary'>{data.strTags}</div>
             {data.strTags && (
                     <div>
@@ -66,7 +61,7 @@ export default function MealInfo({ saveMeal }) {
                       ))}
                     </div>
                   )}
-            <div className='absolute bottom-0' onClick={handleSaveMeal}><Button>Save Meal</Button></div>
+            <div className='md:absolute md:bottom-0 max-md:mt-4' onClick={handleSaveMeal}><Button>Save Meal</Button></div>
           </div>
          </section>
           

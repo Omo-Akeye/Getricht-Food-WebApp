@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useQuery } from 'react-query';
 import Spinner from './Spinner';
 
@@ -10,14 +10,19 @@ const SearchMeal = async (searchedMeal) => {
   return data.meals;
 };
 
-function SearchedMealGallery({ searchedMeal }) {
+function SearchedMealGallery({ searchedMeal,onBack }) {
   const { data: mealData, status: mealStatus } = useQuery(['meal', searchedMeal], () => SearchMeal(searchedMeal));
-console.log(mealData);
+
  
 
   return (
     <div>
-      <section className='w-[80%] m-auto mt-10'>
+      <section className='md:w-[80%] m-auto mt-10 w-[90%]'>
+    
+        <div className='mb-3 cursor-pointer' onClick={onBack}>
+            <i className="text-2xl fa-solid fa-arrow-left text-ash"></i>
+        </div>
+        
         {mealStatus === 'loading' && <Spinner/>}
 
        {mealData && mealData.length > 0 && mealStatus === 'success' &&   <ul className='grid gap-4 grid2'>

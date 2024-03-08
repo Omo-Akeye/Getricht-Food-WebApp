@@ -15,10 +15,10 @@ export default function Modal({isModalOpen,setIsModalOpen}) {
             <NavLink to='/'>Home</NavLink>
         </li>
         <li className='py-2'><a href="#">Pages</a></li>
-        <li>
+        <li onClick={(e)=>setIsModalOpen(!isModalOpen)}>
         <NavLink to='/meals'>Meals</NavLink>
         </li>
-        <li className='py-2'>
+        <li className='py-2' onClick={(e)=>setIsModalOpen(!isModalOpen)}>
         <NavLink to='/savedMeals'>Favourite</NavLink>
             </li>
         <li><a href="#">Contact Us</a></li>

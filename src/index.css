@@ -22,11 +22,10 @@ body::-webkit-scrollbar{
    }
 .active {
     color: gold;
-    /* font-weight: bolder; */
 }
    .grid1 {
     grid-template-columns: repeat(auto-fit,minmax(100px,1fr));
    }
    .grid2 {
-    grid-template-columns: repeat(auto-fit,minmax(180px,1fr));
+    grid-template-columns: repeat(auto-fit,minmax(160px,1fr));
    }

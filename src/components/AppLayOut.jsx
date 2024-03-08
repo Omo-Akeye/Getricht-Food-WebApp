@@ -1,14 +1,16 @@
-// import React from 'react'
-// import Nav from './Nav'
-// import Footer1 from './Footer1'
-// import { Outlet } from 'react-router-dom'
+import React, { useState } from 'react'
+import Nav from './Nav'
+import { Outlet } from 'react-router-dom'
+import Modal from './Modal';
 
-// export default function AppLayOut() {
-//   return (
-//     <div>
-//         <Nav/>
-//          <Outlet/>
-//         <Footer1/>
-//     </div>
-//   )
-// }
+export default function AppLayOut() {
+    const [isModalOpen, setIsModalOpen] = useState(false);
+  return (
+    <div>
+         <Nav isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen}/>
+         {isModalOpen && <Modal isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen} />}
+         <Outlet/>
+        
+    </div>
+  )
+}
