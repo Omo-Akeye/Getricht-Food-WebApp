@@ -6,7 +6,7 @@ export default function Laurels() {
   return (
     <div className='text-white bg-image pt-14 pb-28'>
          <img src="/images/Group 87.png" alt="" className='w-24 mx-6 md:mx-12' />
-        <section className='md:w-[80%] w-[90%] m-auto grid md:grid-cols-2 gap-20 mt-3 items-center'>
+        <section className='xl:w-[80%] w-[90%] m-auto grid min-[850px]:grid-cols-[1.5fr,1fr] lg:grid-cols-2 gap-20 mt-3 items-center'>
        
             <div>
           <div className='mb-10'>
@@ -15,6 +15,7 @@ export default function Laurels() {
              <h2 className='mt-4 text-6xl text-primary'>Our Laurels</h2>
           </div>
       
+     
       <article className='grid gap-3 md:grid-cols-2'>
 
       <div className='flex items-center '>
@@ -51,7 +52,7 @@ export default function Laurels() {
      
             </div>
 
-            <div className='relative text-center md:text-right'> 
+            <div className='relative text-center min-[850px]:text-right'> 
                 <div className='md:w-[70%] w-[80%] relative inline-block'>
                 <LazyLoadImage
     alt={'hero'}

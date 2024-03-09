@@ -1,5 +1,5 @@
 import React from 'react'
-import Button from './Button'
+import Button from '../../components/Button';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
 
@@ -32,8 +32,8 @@ export default function AboutUs() {
             <Button>Know More</Button>
             </article>
 
-            <span className='absolute md:left-[15%] max-md:top-1/4'>
-            <img src="/images/G.png" className='z-0 md:w-[40%] m-auto w-[80%]' alt="" loading='lazy' />
+            <span className='absolute md:left-[15%] max-md:top-1/4 '>
+            <img src="/images/G.png" className='z-0 md:w-[40%] m-auto w-[70%] sm:w-[60%]' alt="" loading='lazy' />
             </span>
         </section>
     </div>

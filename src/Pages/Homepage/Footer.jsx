@@ -1,5 +1,6 @@
 import React from 'react'
-import Footer1 from './Footer1'
+import Footer1 from '../../components/Footer1'
+
 import { Link } from 'react-scroll'
 
 export default function Footer() {

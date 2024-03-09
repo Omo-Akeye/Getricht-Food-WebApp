@@ -4,13 +4,13 @@ import { Link, NavLink } from 'react-router-dom'
 
 export default function Nav({isModalOpen, setIsModalOpen}) {
   return (
-  <div className='text-ash flex justify-between font-sans w-[90%] m-auto mt-5 mb-12'>
+  <div className='text-ash flex justify-between font-sans w-[90%] lg:w-[90%] m-auto mt-5 mb-12'>
        <div>
        <NavLink to='/'>
-           <img src="/images/Gerícht.svg" alt=""  className='w-32 lg:w-48' />
+           <img src="/images/Gerícht.svg" alt=""  className='w-28 lg:w-48' />
            </NavLink>
         </div>
-    <ul className='justify-between hidden md:flex'>
+    <ul className='justify-between hidden min-[864px]:flex'>
         <li>
            
             <NavLink to='/'>Home</NavLink>
@@ -24,17 +24,17 @@ export default function Nav({isModalOpen, setIsModalOpen}) {
             </li>
         <li><a href="#">Contact Us</a></li>
     </ul>
-   <ul className='justify-between hidden md:flex'>
+   <ul className='justify-between hidden min-[864px]:flex'>
     <li><a href="#">Log In / Registration</a></li>
-    <li className='px-8'>
+    <li className='px-8 hidden lg:block' >
         <span className='h-3 border-solid border-l-[2px] border-l-ash'></span>
     </li>
-    <li><a href="">Book Table</a></li>
+    <li className='max-lg:ml-8'><a href="">Book Table</a></li>
     
    </ul>
 
-   <div>
-   <i className="block text-4xl cursor-pointer fa-solid fa-bars md:hidden"  onClick={(e)=>setIsModalOpen(!isModalOpen)}
+   <div className='min-[864px]:hidden block '>
+   <i className="text-4xl cursor-pointer fa-solid fa-bars"  onClick={(e)=>setIsModalOpen(!isModalOpen)}
    ></i>
    </div>
   </div>

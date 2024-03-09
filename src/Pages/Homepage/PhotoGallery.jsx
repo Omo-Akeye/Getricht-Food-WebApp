@@ -1,5 +1,5 @@
 import React from 'react'
-import Button from './Button'
+import Button from '../../components/Button'
 import Photo from './Photo'
 
 export default function PhotoGallery() {

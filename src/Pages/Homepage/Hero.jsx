@@ -1,16 +1,14 @@
 import React from 'react'
-import Button from './Button'
+import Button from '../../components/Button'
 import { Link } from 'react-scroll'
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
 
 
 export default function Hero() {
-  const divStyle = { 
-    backgroundImage:"url('/images/Hero img (1).webp')"
-  }
+ 
   return (
-    <div className='grid md:grid-cols-2 lg:w-[80%] w-[90%] m-auto lg:gap-40 md:gap-28 gap-8 md:mt-20 lg:mb-40 relative' id='hero'>
+    <div className='grid md:grid-cols-2 xl:w-[80%] w-[90%] m-auto lg:gap-40 md:gap-24 gap-8 md:mt-20 lg:mb-40 relative mb-8' id='hero'>
          <div className='mt-6 text-white max-md:order-last'>
             <h2 className='text-2xl'>Chase the new Flavour</h2>
             <img src="/images/Frame 17.svg" alt="" className='py-2'/>
@@ -20,18 +18,18 @@ export default function Hero() {
         </div>
 
         <section className='text-center'>
-          <div className='m-auto md:w-full w-[90%]'>
+          <div className='m-auto md:w-full sm:w-[70%] w-[90%]'>
           <LazyLoadImage
     alt={'hero'}
     effect="blur"
     src={'/images/Hero img (1).png'} />
-          {/* <img src="/images/Hero img (1).png" alt="" className='w-full' /> */}
+          
           </div>
 
           
           
         </section>
-        <div className='absolute lg:right-[-15%] bottom-[5%] cursor-pointer right-[-12%] max-md:right-[-5%] max-md:bottom-0'>
+        <div className='absolute lg:right-[-5%]  xl:right-[-8%] bottom-[5%] cursor-pointer  max-md:right-[-8%] max-md:bottom-0 md:right-[-5%]'>
          
           <Link    to="about"  spy={true}  smooth={true}  offset={50} duration={500}>
           <img src="/images/Scroll.svg" alt="" className=''  />

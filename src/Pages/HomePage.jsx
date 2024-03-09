@@ -1,14 +1,14 @@
 import React, { useState } from 'react'
-import Nav from '../components/Nav'
-import Hero from '../components/Hero'
-import AboutUs from '../components/AboutUs'
-import TodaySpecial from '../components/TodaySpecial'
-import ChefWord from '../components/ChefWord'
-import Video from '../components/Video'
-import Laurels from '../components/Laurel '
-import PhotoGallery from '../components/PhotoGallery'
-import FindUs from '../components/FindUs'
-import Footer from '../components/Footer'
+
+import Hero from './Homepage/Hero'
+import AboutUs from './Homepage/AboutUs'
+import TodaySpecial from './Homepage/TodaySpecial'
+import ChefWord from './Homepage/ChefWord'
+import Video from './Homepage/Video'
+import Laurels from './Homepage/Laurel '
+import PhotoGallery from './Homepage/PhotoGallery'
+import FindUs from './Homepage/FindUs'
+import Footer from './Homepage/Footer'
 
 
 export default function HomePage() {

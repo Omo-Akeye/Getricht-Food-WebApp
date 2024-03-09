@@ -29,3 +29,11 @@ body::-webkit-scrollbar{
    .grid2 {
     grid-template-columns: repeat(auto-fit,minmax(160px,1fr));
    }
+/* @media (min-width: 864px) {
+   .hide1 {
+      display: flex;
+   }   
+   .hide2 {
+    display: none;
+   }
+} */

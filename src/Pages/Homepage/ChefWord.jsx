@@ -7,9 +7,9 @@ export default function ChefWord() {
   return (
     <div className='relative py-12 md:py-24 bg-image text-ash'>
      
-    <section className='md:w-[80%] w-[90%] m-auto grid md:grid-cols-2 md:gap-24 items-center gap-12'>
+    <section className='xl:w-[80%] w-[90%] m-auto grid md:grid-cols-2 md:gap-24 items-center gap-12'>
 
-    <div className=''>
+    <div className='m-auto md:w-full sm:w-[70%] w-[90%]'>
     <LazyLoadImage
     alt={'hero'}
     effect="blur"

@@ -1,12 +1,12 @@
 import React from 'react'
-import Button from './Button'
+import Button from '../../components/Button'
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
 
 export default function FindUs() {
   return (
     <div className='pt-20 pb-12 mt-4 text-white bg-image md:pb-36'>
-        <div className='md:w-[80%] w-[90%] m-auto grid md:grid-cols-2 md:gap-28 items-center gap-14'>
+        <div className='xl:w-[80%] w-[90%] m-auto grid md:grid-cols-2 md:gap-28 items-center gap-14'>
             <article>
             <h3 className='text-2xl'>Contact us</h3>
             <img src="/images/Frame 17.svg" className='my-2' alt="" />

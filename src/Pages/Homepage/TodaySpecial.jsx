@@ -1,12 +1,12 @@
 import React from 'react'
-import Button from './Button'
+import Button from '../../components/Button';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
 
 
 export default function TodaySpecial() {
   return (
-    <div className='w-[80%] m-auto text-center py-12'>
+    <div className='xl:w-[80%] m-auto text-center py-12 w-[90%]'>
         <section className='text-white'>
             <div className='mb-10'>
             <h2 className='text-3xl'>Menu that Fits You Palatte</h2>
@@ -15,23 +15,24 @@ export default function TodaySpecial() {
            
             </div>
 
-           <article className='flex justify-between max-md:flex-col'>
+           <article className='flex justify-between max-md:flex-col items-center'>
            <main>
            <h1 className='mb-8 text-4xl md:mb-12'>Wine & Beer</h1>
-                <div className='flex items-center justify-between md:mb-10'>
+                
+                  <div className='flex justify-between items-center lg:mb-10 mb-8 md:mb-5'>
                     <span className='text-start'>
-                        <h2 className='mb-2 text-2xl text-primary'>Chapel Hill Shiraz</h2>
+                        <h2 className='text-2xl text-primary mb-2'>Chapel Hill Shiraz</h2>
                         <p className='font-sans text-ash'>AU | Bottle</p>
                     </span>
 
-                    <span className='flex items-center justify-center '>
+                    <span className='flex justify-center items-center '>
                         <p className=' w-28 h-[1px] bg-white mr-4'></p>
                          <h4 className='text-2xl text-ash' >$59</h4>
                     </span>
 
                 </div>
 
-                <div className='flex items-center justify-between md:mb-10'>
+                <div className='flex items-center justify-between lg:mb-10 mb-8 md:mb-5'>
                     <span className='text-start'>
                         <h2 className='mb-2 text-2xl text-primary'>Catena Malbee</h2>
                         <p className='font-sans text-ash'>AR | Bottle</p>
@@ -44,7 +45,7 @@ export default function TodaySpecial() {
 
                 </div>
 
-                <div className='flex items-center justify-between md:mb-10'>
+                <div className='flex items-center justify-betweenlg:mb-10 mb-8 md:mb-5'>
                     <span className='text-start'>
                         <h2 className='mb-2 text-2xl text-primary'>La Vieille Rose</h2>
                         <p className='font-sans text-ash'>FR | 750 ml</p>
@@ -57,7 +58,7 @@ export default function TodaySpecial() {
 
                 </div>
 
-                <div className='flex items-center justify-between md:mb-10'>
+                <div className='flex items-center justify-between lg:mb-10 mb-8 md:mb-5'>
                     <span className='text-start'>
                         <h2 className='mb-2 text-2xl text-primary'>Rhino Pale Ale</h2>
                         <p className='font-sans text-ash '>CA | 750 ml</p>
@@ -86,7 +87,7 @@ export default function TodaySpecial() {
               
             </main>
 
-            <div className='w-[80%] m-auto max-md:mb-8' > 
+            <div className='xl:w-[40%] md:w-[50%] m-auto max-md:mb-8' > 
             <LazyLoadImage
     alt={'hero'}
     effect="blur"
@@ -96,10 +97,10 @@ export default function TodaySpecial() {
 
             <main className=''>
             <h1 className='mb-8 text-5xl md:mb-12'>Cocktails</h1>
-                <div className='flex items-center justify-between mb-4 md:mb-10'>
+                <div className='flex items-center justify-between lg:mb-10 mb-8 md:mb-5'>
                     <span className='text-start'>
                         <h2 className='text-2xl text-primary'>Aperol Spritz</h2>
-                        <p className='font-sans text-ash'>Aperol | Bottle |</p>
+                        <p className='font-sans text-ash'>Aperol | Bottle </p>
                     </span>
 
                     <span className='flex items-center justify-center '>
@@ -109,7 +110,7 @@ export default function TodaySpecial() {
 
                 </div>
 
-                <div className='flex items-center justify-between mb-4 md:mb-10'>
+                <div className='flex items-center justify-between lg:mb-10 mb-8 md:mb-5'>
                     <span className='text-start'>
                         <h2 className='text-2xl text-primary'>Catena Malbee</h2>
                         <p className='font-sans text-ash'>AR | Bottle</p>
@@ -122,7 +123,7 @@ export default function TodaySpecial() {
 
                 </div>
 
-                <div className='flex items-center justify-between mb-4 md:mb-10'>
+                <div className='flex items-center justify-between lg:mb-10 mb-8 md:mb-5'>
                     <span className='text-start'>
                         <h2 className='text-2xl text-primary'>La Vieille Rose</h2>
                         <p className='font-sans text-ash'>FR | 750 ml</p>
@@ -135,7 +136,7 @@ export default function TodaySpecial() {
 
                 </div>
 
-                <div className='flex items-center justify-between mb-4 md:mb-10'>
+                <div className='flex items-center justify-between lg:mb-10 mb-8 md:mb-5'>
                     <span className='text-start'>
                         <h2 className='text-2xl text-primary'>Rhino Pale Ale</h2>
                         <p className='font-sans text-ash'>CA | 750 ml</p>

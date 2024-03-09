@@ -32,6 +32,24 @@ export default function Photo() {
         <Swiper
         slidesPerView={2}
         spaceBetween={2}
+        breakpoints={{
+          420 : {
+            slidesPerView :2.6,
+            spaceBetween: 5
+          },
+          540 : {
+            slidesPerView :3,
+            spaceBetween: 9
+          },
+          640 : {
+            slidesPerView :3.5,
+            spaceBetween: 9
+          },
+          1000 : {
+            slidesPerView :4,
+            spaceBetween: 9
+          }
+        }}
         freeMode={true}
         modules={[FreeMode]}
         className="mt-5 mySwiper cursor-grab"
@@ -55,49 +73,3 @@ export default function Photo() {
 
   )
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// export default function Photo() {
-//     const [width,setWidth]= useState(0);
-//     const carousel = useRef()
-//     useEffect(()=> {
-//         setWidth(carousel.current.scrollWidth - carousel.current.offsetWidth)
-//     },[])
-//   return (
-// <motion.div ref={carousel} className='overflow-hidden cursor-grab'>
-//     <motion.div drag='x'
-//     dragConstraints={{right:0 , left: -width}} className='flex my-5 border-2 '>
-    
-//     {img.map((image) => (
-//    <motion.div key={image.id} >
-//      <motion.div className='w-[120px] h-[100%] mx-2'>
-//      <img src= {image.src}  className='w-full h-[100%] pointer-events-none ' alt="" />
-//      </motion.div>
-//    </motion.div>
-//     ))}
-    
-  
-// </motion.div>
-// </motion.div>
-//   )
-// }
