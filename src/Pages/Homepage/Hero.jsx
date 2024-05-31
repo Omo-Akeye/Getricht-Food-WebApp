@@ -22,14 +22,16 @@ export default function Hero() {
           <LazyLoadImage
     alt={'hero'}
     effect="blur"
-    src={'/images/Hero img (1).png'} />
+
+    src={'/images/Hero img (1).webp'} 
+    />
           
           </div>
 
           
           
         </section>
-        <div className='absolute lg:right-[-5%]  xl:right-[-8%] bottom-[5%] cursor-pointer  max-md:right-[-8%] max-md:bottom-0 md:right-[-5%]'>
+        <div className='absolute lg:right-[-5%]  xl:right-[-8%] bottom-[5%]  cursor-pointer  max-md:right-[-5%] max-md:bottom-0 md:right-[-5%]'>
          
           <Link    to="about"  spy={true}  smooth={true}  offset={50} duration={500}>
           <img src="/images/Scroll.svg" alt="" className=''  />

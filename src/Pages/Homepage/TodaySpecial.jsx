@@ -45,10 +45,10 @@ export default function TodaySpecial() {
 
                 </div>
 
-                <div className='flex items-center justify-betweenlg:mb-10 mb-8 md:mb-5'>
+                <div className='flex items-center justify-between lg:mb-10 mb-8 md:mb-5'>
                     <span className='text-start'>
-                        <h2 className='mb-2 text-2xl text-primary'>La Vieille Rose</h2>
-                        <p className='font-sans text-ash'>FR | 750 ml</p>
+                        <h2 className='text-2xl text-primary'>Rhino Pale Ale</h2>
+                        <p className='font-sans text-ash'>CA | 750 ml</p>
                     </span>
 
                     <span className='flex items-center justify-center '>
@@ -125,8 +125,8 @@ export default function TodaySpecial() {
 
                 <div className='flex items-center justify-between lg:mb-10 mb-8 md:mb-5'>
                     <span className='text-start'>
-                        <h2 className='text-2xl text-primary'>La Vieille Rose</h2>
-                        <p className='font-sans text-ash'>FR | 750 ml</p>
+                        <h2 className='text-2xl text-primary'>Rhino Pale Ale</h2>
+                        <p className='font-sans text-ash'>CA | 750 ml</p>
                     </span>
 
                     <span className='flex items-center justify-center '>

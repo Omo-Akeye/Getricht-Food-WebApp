@@ -7,16 +7,18 @@
 
 html {
  background-color: #0C0B08;
+ overflow-x: hidden;
 }
 
 body {
     font-family: 'Cormorant Upright', 'serif';
+    overflow-x: hidden;
 }
 body::-webkit-scrollbar{
     display: none;
 }
 .bg-image {
-    background-image: url(/images/about-bg.png);
+    background-image: url('/images/BG.webp');
     background-repeat: no-repeat;
     background-size: cover;
    }
@@ -29,11 +31,3 @@ body::-webkit-scrollbar{
    .grid2 {
     grid-template-columns: repeat(auto-fit,minmax(160px,1fr));
    }
-/* @media (min-width: 864px) {
-   .hide1 {
-      display: flex;
-   }   
-   .hide2 {
-    display: none;
-   }
-} */
