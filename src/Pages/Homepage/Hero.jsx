@@ -3,6 +3,7 @@ import Button from '../../components/Button'
 import { Link } from 'react-scroll'
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
+import { NavLink } from 'react-router-dom';
 
 
 export default function Hero() {
@@ -14,7 +15,12 @@ export default function Hero() {
             <img src="/images/Frame 17.svg" alt="" className='py-2'/>
             <h1 className='text-4xl lg:text-8xl md:text-7xl text-primary capitalize lg:leading-[120px]'>The key to fine dining</h1>
             <p className='pt-2 font-sans text-ash md:mb-8'>Sit tellus lobortis sed senectus vivamus molestie. Condimentum volutpat morbi facilisis quam scelerisque sapien. Et, penatibus aliquam amet tellus </p>
-            <Button>Explore Menu</Button>
+           
+            <NavLink to='/meals'>
+            <Button>
+            Explore Menu
+             </Button>
+              </NavLink>
         </div>
 
         <section className='text-center'>
